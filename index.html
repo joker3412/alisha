@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ALISHA ∞ | Future Engineer</title>
+<style>
+*{box-sizing:border-box}
+body{
+ margin:0;background:#080713;color:white;
+ font-family:Arial,sans-serif;overflow-x:hidden;
+}
+body:before{
+ content:"";position:fixed;inset:0;z-index:-1;
+ background:
+ radial-gradient(ellipse at 20% 20%,#59218c55,transparent 45%),
+ radial-gradient(ellipse at 80% 60%,#075eaa44,transparent 45%);
+}
+nav{
+ display:flex;justify-content:space-between;align-items:center;
+ padding:22px 7%;position:sticky;top:0;
+ background:#080713dd;backdrop-filter:blur(15px);
+ border-bottom:1px solid #ffffff15;z-index:5;
+}
+.logo{font-size:23px;font-weight:bold;color:#c7a5ff}
+nav a{color:#ddd;text-decoration:none;margin-left:18px;font-size:13px}
+section{padding:85px 8%;max-width:1150px;margin:auto}
+.hero{text-align:center;padding-top:100px;padding-bottom:110px}
+.tag{color:#b89aff;letter-spacing:4px;font-size:12px}
+h1{font-size:clamp(48px,10vw,95px);margin:25px 0 10px}
+h1 span{
+ background:linear-gradient(90deg,#b88aff,#63dfff,#f4a7ff);
+ -webkit-background-clip:text;color:transparent
+}
+.infinity{
+ font-size:85px;color:#b68bff;
+ text-shadow:0 0 25px #a45bff,0 0 65px #6a31ff;
+ animation:float 3s infinite ease-in-out;
+}
+@keyframes float{50%{transform:translateY(-15px) scale(1.08)}}
+.subtitle{color:#b6b1c9;line-height:1.8;max-width:600px;margin:20px auto}
+.btn{
+ display:inline-block;padding:14px 24px;border-radius:30px;
+ text-decoration:none;color:white;background:linear-gradient(90deg,#783bda,#187bc6);
+ margin:8px;border:0;cursor:pointer;font-weight:bold
+}
+.btn2{background:transparent;border:1px solid #a77cff}
+h2{font-size:35px;margin-bottom:15px}
+.description{color:#aaa;line-height:1.8}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;margin-top:30px}
+.card{
+ padding:25px;border:1px solid #ffffff20;border-radius:18px;
+ background:linear-gradient(140deg,#ffffff10,#ffffff03);
+ transition:.3s;
+}
+.card:hover{transform:translateY(-7px);border-color:#b28aff;box-shadow:0 0 25px #8c4bff22}
+.card .symbol{font-size:35px}
+.card h3{color:#c9aaff}
+.pill{display:inline-block;padding:8px 13px;background:#8b5cf622;color:#d3baff;border-radius:20px;margin:5px;font-size:13px}
+.project{min-height:145px}
+#chat{border:1px solid #9765ce66;border-radius:20px;padding:20px;background:#100d20}
+.messages{height:270px;overflow-y:auto;padding:10px}
+.msg{padding:12px 15px;margin:10px 0;border-radius:13px;max-width:90%;line-height:1.5;font-size:14px}
+.bot{background:#28203d;color:#e4d8ff}
+.user{background:#443078;margin-left:auto}
+.chatrow{display:flex;gap:8px;margin-top:10px}
+input{min-width:0;flex:1;padding:14px;border-radius:12px;background:#171327;color:white;border:1px solid #65518a}
+footer{text-align:center;padding:40px;color:#928aa7;border-top:1px solid #ffffff15}
+.small{font-size:12px;color:#aaa;line-height:1.6}
+</style>
+</head>
+<body>
+<nav>
+ <div class="logo">ALISHA ∞</div>
+ <div>
+  <a href="#about">About</a>
+  <a href="#skills">Skills</a>
+  <a href="#projects">Projects</a>
+  <a href="#ai">AI</a>
+ </div>
+</nav>
+
+<section class="hero">
+ <div class="tag">WELCOME TO MY DIGITAL UNIVERSE</div>
+ <div class="infinity">∞</div>
+ <h1>I AM <span>ALISHA</span></h1>
+ <h3>Electrical Engineering Student | Future Innovator</h3>
+ <p class="subtitle">
+  Exploring the power of electricity, the intelligence of technology,
+  and the possibilities of tomorrow. I don't follow limits.
+  I engineer beyond them.
+ </p>
+ <a class="btn" href="#projects">Explore My Universe</a>
+ <a class="btn btn2" href="#ai">Talk to Alisha AI</a>
+</section>
+
+<section id="about">
+ <div class="tag">01 / THE PERSON BEHIND THE CIRCUITS</div>
+ <h2>My Digital Identity ⚡</h2>
+ <p class="description">
+ Hello! I'm Alisha, an Electrical Engineering student fascinated by
+ electricity, electronics, innovation and artificial intelligence.
+ My goal is to turn imagination into technology and ideas into reality.
+ </p>
+ <div class="grid">
+  <div class="card"><div class="symbol">⚡</div><h3>My Passion</h3>Electrical engineering and new technology.</div>
+  <div class="card"><div class="symbol">🚀</div><h3>My Vision</h3>Building solutions that make a difference.</div>
+  <div class="card"><div class="symbol">∞</div><h3>My Mindset</h3>Learning without limits. Growing without boundaries.</div>
+ </div>
+</section>
+
+<section id="skills">
+ <div class="tag">02 / MY ENGINEERING TOOLKIT</div>
+ <h2>Skills & Interests</h2>
+ <p class="description">My engineering journey starts with curiosity.</p>
+ <div>
+  <span class="pill">Electrical Circuits</span>
+  <span class="pill">Electronics</span>
+  <span class="pill">Electrical Machines</span>
+  <span class="pill">Power Systems</span>
+  <span class="pill">Arduino</span>
+  <span class="pill">Programming</span>
+  <span class="pill">Artificial Intelligence</span>
+  <span class="pill">Innovation</span>
+ </div>
+</section>
+
+<section id="projects">
+ <div class="tag">03 / IDEAS INTO REALITY</div>
+ <h2>My Project Universe</h2>
+ <p class="description">A space to showcase my engineering experiments and creations.</p>
+ <div class="grid">
+  <div class="card project"><div class="symbol">🔋</div><h3>Smart Energy System</h3><p class="description">My future energy monitoring project.</p></div>
+  <div class="card project"><div class="symbol">🤖</div><h3>AI Innovation</h3><p class="description">Exploring artificial intelligence and automation.</p></div>
+  <div class="card project"><div class="symbol">💡</div><h3>Smart Electronics</h3><p class="description">Ideas for intelligent electronic devices.</p></div>
+ </div>
+ <p class="small">These are starter project placeholders. Replace them with your actual projects as you build them.</p>
+</section>
+
+<section id="ai">
+ <div class="tag">04 / YOUR PERSONAL AI ASSISTANT</div>
+ <h2>Meet Alisha AI 🤖</h2>
+ <p class="description">Ask questions about engineering, electronics, mathematics, technology and more.</p>
+ <div id="chat">
+  <div class="messages" id="messages">
+   <div class="msg bot">Hello! I'm Alisha AI ✨ Welcome to my digital universe. Ask me anything!</div>
+  </div>
+  <div class="chatrow">
+   <input id="question" placeholder="Ask Alisha AI something..." />
+   <button class="btn" onclick="sendMessage()">Send</button>
+  </div>
+  <div style="margin-top:20px">
+   <input id="apikey" type="password" placeholder="Optional: Enter your Gemini API key"/>
+   <p class="small">For real AI responses, add your own Gemini API key. It stays in this page's memory and is not saved to GitHub. Never publish your key.</p>
+  </div>
+ </div>
+</section>
+
+<footer>
+ <div class="logo">ALISHA ∞</div>
+ <p>Designed with curiosity. Powered by imagination. ⚡</p>
+ <p>© 2026 ALISHA | Future Electrical Engineer</p>
+</footer>
+
+<script>
+const messages=document.getElementById("messages");
+function addMessage(text,who){
+ const div=document.createElement("div");
+ div.className="msg "+who;
+ div.textContent=text;
+ messages.appendChild(div);
+ messages.scrollTop=messages.scrollHeight;
+}
+let history=[];
+async function sendMessage(){
+ const input=document.getElementById("question");
+ const key=document.getElementById("apikey").value.trim();
+ const q=input.value.trim();
+ if(!q)return;
+ input.value="";
+ addMessage(q,"user");
+ history.push({role:"user",parts:[{text:q}]});
+ if(!key){
+  addMessage("I'm in demo mode! To activate real AI answers, enter a Gemini API key below. You can get a free-tier key from Google AI Studio.","bot");
+  return;
+ }
+ const loading=document.createElement("div");
+ loading.className="msg bot";
+ loading.textContent="Alisha AI is thinking... ✨";
+ messages.appendChild(loading);
+ try{
+  const response=await fetch(
+   "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key="+encodeURIComponent(key),
+   {
+    method:"POST",
+    headers:{"Content-Type":"application/json"},
+    body:JSON.stringify({
+     systemInstruction:{parts:[{text:"You are Alisha AI, a friendly, intelligent assistant on Alisha's electrical engineering portfolio website. Help with electrical engineering, electronics, mathematics, science, programming and general questions. Explain clearly and encourage learning."}]},
+     contents:history.slice(-12)
+    })
+   }
+  );
+  const data=await response.json();
+  loading.remove();
+  if(!response.ok)throw new Error(data.error?.message||"API request failed");
+  const answer=data.candidates?.[0]?.content?.parts?.map(p=>p.text||"").join("")||"I couldn't generate a response.";
+  addMessage(answer,"bot");
+  history.push({role:"model",parts:[{text:answer}]});
+ }catch(error){
+  loading.remove();
+  addMessage("Connection issue: "+error.message,"bot");
+ }
+}
+document.getElementById("question").addEventListener("keydown",e=>{
+ if(e.key==="Enter")sendMessage();
+});
+</script>
+</body>
+</html>
