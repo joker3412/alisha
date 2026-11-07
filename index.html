@@ -3,213 +3,391 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>ALISHA ∞ | Future Engineer</title>
+<meta name="theme-color" content="#090711">
+<title>ALISHA ∞ | Engineer Your Universe</title>
+
 <style>
+:root{
+ --bg:#090711;--panel:#151121;--purple:#bd83ff;
+ --blue:#54d9ff;--gold:#e8c477;--muted:#aaa5bb;
+}
 *{box-sizing:border-box}
+html{scroll-behavior:smooth}
 body{
- margin:0;background:#080713;color:white;
- font-family:Arial,sans-serif;overflow-x:hidden;
+ margin:0;background:var(--bg);color:#fff;
+ font-family:system-ui,Arial,sans-serif;overflow-x:hidden;
 }
 body:before{
  content:"";position:fixed;inset:0;z-index:-1;
  background:
- radial-gradient(ellipse at 20% 20%,#59218c55,transparent 45%),
- radial-gradient(ellipse at 80% 60%,#075eaa44,transparent 45%);
+ radial-gradient(circle at 15% 15%,#7833bd35,transparent 35%),
+ radial-gradient(circle at 85% 45%,#087bc532,transparent 38%),
+ radial-gradient(circle at 50% 100%,#ad81301c,transparent 45%);
 }
 nav{
+ position:sticky;top:0;z-index:10;
  display:flex;justify-content:space-between;align-items:center;
- padding:22px 7%;position:sticky;top:0;
- background:#080713dd;backdrop-filter:blur(15px);
- border-bottom:1px solid #ffffff15;z-index:5;
+ padding:16px 6%;background:#090711eF;
+ border-bottom:1px solid #ffffff19;backdrop-filter:blur(15px);
 }
-.logo{font-size:23px;font-weight:bold;color:#c7a5ff}
-nav a{color:#ddd;text-decoration:none;margin-left:18px;font-size:13px}
-section{padding:85px 8%;max-width:1150px;margin:auto}
-.hero{text-align:center;padding-top:100px;padding-bottom:110px}
-.tag{color:#b89aff;letter-spacing:4px;font-size:12px}
-h1{font-size:clamp(48px,10vw,95px);margin:25px 0 10px}
-h1 span{
- background:linear-gradient(90deg,#b88aff,#63dfff,#f4a7ff);
- -webkit-background-clip:text;color:transparent
+.logo{font-size:22px;font-weight:900;letter-spacing:2px;
+ background:linear-gradient(90deg,var(--purple),var(--gold),var(--blue));
+ color:transparent;background-clip:text}
+nav a{color:#d4cce3;text-decoration:none;font-size:12px;margin-left:15px}
+section{max-width:1100px;margin:auto;padding:75px 7%}
+.hero{text-align:center;padding-top:85px;padding-bottom:95px}
+.kicker{font-size:11px;letter-spacing:4px;color:var(--gold)}
+h1{font-size:clamp(47px,11vw,95px);margin:20px 0 0;line-height:1.05}
+.gradient{
+ background:linear-gradient(100deg,#d1a2ff,#55dfff,#f4d18b);
+ color:transparent;background-clip:text;
 }
 .infinity{
- font-size:85px;color:#b68bff;
- text-shadow:0 0 25px #a45bff,0 0 65px #6a31ff;
- animation:float 3s infinite ease-in-out;
+ font-size:90px;color:var(--purple);
+ text-shadow:0 0 25px #9e4dff,0 0 70px #6335ff;
+ animation:float 3s ease-in-out infinite;
 }
-@keyframes float{50%{transform:translateY(-15px) scale(1.08)}}
-.subtitle{color:#b6b1c9;line-height:1.8;max-width:600px;margin:20px auto}
+@keyframes float{50%{transform:translateY(-14px) scale(1.08)}}
+.subtitle{max-width:620px;margin:22px auto;color:var(--muted);line-height:1.8}
 .btn{
- display:inline-block;padding:14px 24px;border-radius:30px;
- text-decoration:none;color:white;background:linear-gradient(90deg,#783bda,#187bc6);
- margin:8px;border:0;cursor:pointer;font-weight:bold
+ border:0;border-radius:30px;padding:13px 22px;
+ color:white;background:linear-gradient(100deg,#7436c7,#087ab8);
+ font-weight:bold;cursor:pointer;margin:5px;
 }
-.btn2{background:transparent;border:1px solid #a77cff}
-h2{font-size:35px;margin-bottom:15px}
-.description{color:#aaa;line-height:1.8}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;margin-top:30px}
+.btn:hover{filter:brightness(1.3)}
+.gold{background:linear-gradient(100deg,#a67a32,#e5c67e);color:#17100a}
+.outline{background:transparent;border:1px solid #a77de8}
+h2{font-size:32px;margin:12px 0}
+.muted{color:var(--muted);line-height:1.8}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:25px}
 .card{
- padding:25px;border:1px solid #ffffff20;border-radius:18px;
- background:linear-gradient(140deg,#ffffff10,#ffffff03);
- transition:.3s;
+ background:linear-gradient(140deg,#ffffff12,#ffffff04);
+ border:1px solid #ffffff20;border-radius:19px;padding:23px;
+ transition:.25s;
 }
-.card:hover{transform:translateY(-7px);border-color:#b28aff;box-shadow:0 0 25px #8c4bff22}
-.card .symbol{font-size:35px}
-.card h3{color:#c9aaff}
-.pill{display:inline-block;padding:8px 13px;background:#8b5cf622;color:#d3baff;border-radius:20px;margin:5px;font-size:13px}
-.project{min-height:145px}
-#chat{border:1px solid #9765ce66;border-radius:20px;padding:20px;background:#100d20}
-.messages{height:270px;overflow-y:auto;padding:10px}
-.msg{padding:12px 15px;margin:10px 0;border-radius:13px;max-width:90%;line-height:1.5;font-size:14px}
-.bot{background:#28203d;color:#e4d8ff}
-.user{background:#443078;margin-left:auto}
-.chatrow{display:flex;gap:8px;margin-top:10px}
-input{min-width:0;flex:1;padding:14px;border-radius:12px;background:#171327;color:white;border:1px solid #65518a}
-footer{text-align:center;padding:40px;color:#928aa7;border-top:1px solid #ffffff15}
-.small{font-size:12px;color:#aaa;line-height:1.6}
+.card:hover{transform:translateY(-5px);border-color:var(--purple);box-shadow:0 0 22px #9e5bff22}
+.icon{font-size:34px}
+.card h3{color:var(--purple)}
+.tag{font-size:11px;letter-spacing:3px;color:var(--blue)}
+.pill{display:inline-block;padding:8px 12px;border-radius:20px;
+ background:#aa78ff19;color:#d8bdff;margin:4px;font-size:12px}
+.metric{font-size:32px;color:var(--gold);font-weight:800}
+input,select{
+ width:100%;background:#0e0b19;color:white;border:1px solid #51436d;
+ border-radius:11px;padding:13px;margin:6px 0;font-size:15px;
+}
+label{font-size:13px;color:#c5bad7}
+.panel{
+ background:#120f1e;border:1px solid #7652a866;
+ padding:22px;border-radius:20px;margin-top:20px;
+}
+.chatbox{height:320px;overflow-y:auto;padding:8px}
+.message{padding:12px 15px;margin:10px 0;border-radius:14px;
+ max-width:90%;white-space:pre-wrap;line-height:1.55;font-size:14px}
+.bot{background:#28203a;color:#eadcff}
+.user{background:#493077;margin-left:auto}
+.status{font-size:12px;color:var(--blue);margin:10px 0}
+.chatrow{display:flex;gap:7px;align-items:center}
+.chatrow input{flex:1;min-width:0}
+.chatrow button{flex-shrink:0}
+canvas{width:100%;height:170px;border-radius:14px}
+footer{text-align:center;padding:45px 15px;color:#938ba4;border-top:1px solid #ffffff19}
+.small{font-size:11px;color:#8e879d;line-height:1.7}
+@media(max-width:560px){
+ nav{padding:13px 4%}
+ nav a{font-size:10px;margin-left:7px}
+ .logo{font-size:17px}
+ section{padding:55px 5%}
+ .hero{padding-top:65px}
+ h2{font-size:27px}
+ .panel{padding:14px}
+}
 </style>
 </head>
+
 <body>
 <nav>
  <div class="logo">ALISHA ∞</div>
  <div>
   <a href="#about">About</a>
-  <a href="#skills">Skills</a>
+  <a href="#lab">Lab</a>
   <a href="#projects">Projects</a>
   <a href="#ai">AI</a>
  </div>
 </nav>
 
 <section class="hero">
- <div class="tag">WELCOME TO MY DIGITAL UNIVERSE</div>
+ <div class="kicker">WELCOME TO THE FUTURE</div>
  <div class="infinity">∞</div>
- <h1>I AM <span>ALISHA</span></h1>
- <h3>Electrical Engineering Student | Future Innovator</h3>
+ <h1>I AM <span class="gradient">ALISHA</span></h1>
+ <h3 class="gradient">ELECTRICAL ENGINEERING STUDENT</h3>
  <p class="subtitle">
-  Exploring the power of electricity, the intelligence of technology,
-  and the possibilities of tomorrow. I don't follow limits.
-  I engineer beyond them.
+  Think beyond boundaries. Design beyond imagination.
+  Discover the universe of electrical engineering,
+  artificial intelligence and innovation.
  </p>
- <a class="btn" href="#projects">Explore My Universe</a>
- <a class="btn btn2" href="#ai">Talk to Alisha AI</a>
+ <a href="#lab"><button class="btn gold">ENTER ENGINEERING LAB ⚡</button></a>
+ <a href="#ai"><button class="btn outline">MEET ALISHA AI 🤖</button></a>
 </section>
 
 <section id="about">
- <div class="tag">01 / THE PERSON BEHIND THE CIRCUITS</div>
- <h2>My Digital Identity ⚡</h2>
- <p class="description">
- Hello! I'm Alisha, an Electrical Engineering student fascinated by
- electricity, electronics, innovation and artificial intelligence.
- My goal is to turn imagination into technology and ideas into reality.
+ <div class="tag">01 / MY IDENTITY</div>
+ <h2>Beyond Ordinary. Beyond Limits.</h2>
+ <p class="muted">
+ I'm Alisha, an Electrical Engineering student passionate
+ about circuits, energy, electronics, technology and AI.
+ This is my personal digital universe, where engineering
+ meets creativity.
  </p>
  <div class="grid">
-  <div class="card"><div class="symbol">⚡</div><h3>My Passion</h3>Electrical engineering and new technology.</div>
-  <div class="card"><div class="symbol">🚀</div><h3>My Vision</h3>Building solutions that make a difference.</div>
-  <div class="card"><div class="symbol">∞</div><h3>My Mindset</h3>Learning without limits. Growing without boundaries.</div>
+  <div class="card"><div class="icon">⚡</div><h3>Engineering</h3><p class="muted">Understanding the science behind electrical systems.</p></div>
+  <div class="card"><div class="icon">👑</div><h3>Ambition</h3><p class="muted">Learning, creating and becoming a better engineer.</p></div>
+  <div class="card"><div class="icon">∞</div><h3>Innovation</h3><p class="muted">Ideas have no boundaries.</p></div>
+ </div>
+</section>
+
+<section id="lab">
+ <div class="tag">02 / INTERACTIVE ENGINEERING LAB</div>
+ <h2>Ohm's Law Simulator ⚡</h2>
+ <p class="muted">Change voltage and resistance to calculate current in real time.</p>
+ <div class="panel">
+  <label>Voltage (V)</label>
+  <input id="voltage" type="number" value="12" min="0" step="0.1">
+  <label>Resistance (Ω)</label>
+  <input id="resistance" type="number" value="6" min="0.01" step="0.1">
+  <div class="grid">
+   <div class="card"><div class="tag">CURRENT</div><div class="metric" id="current">2 A</div></div>
+   <div class="card"><div class="tag">POWER</div><div class="metric" id="power">24 W</div></div>
+  </div>
+  <p class="small">Formula: V = I × R | I = V / R | P = V × I</p>
+ </div>
+ <h2 style="margin-top:40px">Live Energy Visualization</h2>
+ <div class="panel">
+  <canvas id="wave"></canvas>
+  <div class="status">● LIVE SIMULATED ELECTRICAL WAVEFORM</div>
  </div>
 </section>
 
 <section id="skills">
- <div class="tag">02 / MY ENGINEERING TOOLKIT</div>
- <h2>Skills & Interests</h2>
- <p class="description">My engineering journey starts with curiosity.</p>
+ <div class="tag">03 / MY TOOLKIT</div>
+ <h2>Engineering Interests</h2>
  <div>
   <span class="pill">Electrical Circuits</span>
-  <span class="pill">Electronics</span>
-  <span class="pill">Electrical Machines</span>
   <span class="pill">Power Systems</span>
+  <span class="pill">Electrical Machines</span>
+  <span class="pill">Electronics</span>
   <span class="pill">Arduino</span>
   <span class="pill">Programming</span>
   <span class="pill">Artificial Intelligence</span>
-  <span class="pill">Innovation</span>
+  <span class="pill">Automation</span>
  </div>
 </section>
 
 <section id="projects">
- <div class="tag">03 / IDEAS INTO REALITY</div>
+ <div class="tag">04 / INNOVATION STUDIO</div>
  <h2>My Project Universe</h2>
- <p class="description">A space to showcase my engineering experiments and creations.</p>
  <div class="grid">
-  <div class="card project"><div class="symbol">🔋</div><h3>Smart Energy System</h3><p class="description">My future energy monitoring project.</p></div>
-  <div class="card project"><div class="symbol">🤖</div><h3>AI Innovation</h3><p class="description">Exploring artificial intelligence and automation.</p></div>
-  <div class="card project"><div class="symbol">💡</div><h3>Smart Electronics</h3><p class="description">Ideas for intelligent electronic devices.</p></div>
+  <div class="card"><div class="icon">🔋</div><h3>Smart Energy</h3><p class="muted">Energy monitoring and management concepts.</p></div>
+  <div class="card"><div class="icon">🤖</div><h3>AI Innovation</h3><p class="muted">Exploring intelligent systems and automation.</p></div>
+  <div class="card"><div class="icon">💡</div><h3>Smart Electronics</h3><p class="muted">Ideas for intelligent electronic devices.</p></div>
  </div>
- <p class="small">These are starter project placeholders. Replace them with your actual projects as you build them.</p>
+ <p class="small">Starter concepts, not completed project claims. Add your real projects here.</p>
 </section>
 
 <section id="ai">
- <div class="tag">04 / YOUR PERSONAL AI ASSISTANT</div>
- <h2>Meet Alisha AI 🤖</h2>
- <p class="description">Ask questions about engineering, electronics, mathematics, technology and more.</p>
- <div id="chat">
-  <div class="messages" id="messages">
-   <div class="msg bot">Hello! I'm Alisha AI ✨ Welcome to my digital universe. Ask me anything!</div>
+ <div class="tag">05 / LOCAL ARTIFICIAL INTELLIGENCE</div>
+ <h2>Meet ALISHA AI 🤖</h2>
+ <p class="muted">Your browser-powered AI study companion. No API key required.</p>
+ <div class="panel">
+  <div class="status" id="aiStatus">● AI model not loaded yet</div>
+  <div class="chatbox" id="messages">
+   <div class="message bot">Hello Alisha! ✨ I am your AI study companion. Load my brain to start chatting about engineering, science and technology!</div>
   </div>
+  <button class="btn gold" id="loadBtn" onclick="loadAI()">LOAD ALISHA AI BRAIN</button>
   <div class="chatrow">
-   <input id="question" placeholder="Ask Alisha AI something..." />
-   <button class="btn" onclick="sendMessage()">Send</button>
+   <input id="question" placeholder="Ask me anything..." autocomplete="off">
+   <button class="btn" id="sendBtn" onclick="sendMessage()">SEND</button>
   </div>
-  <div style="margin-top:20px">
-   <input id="apikey" type="password" placeholder="Optional: Enter your Gemini API key"/>
-   <p class="small">For real AI responses, add your own Gemini API key. It stays in this page's memory and is not saved to GitHub. Never publish your key.</p>
-  </div>
+  <button class="btn outline" onclick="clearChat()">NEW CHAT</button>
+  <p class="small">
+   First launch downloads the AI model from Hugging Face.
+   Internet is required for the first download. Model files
+   may be cached by your browser, but offline availability
+   is not guaranteed. Your messages are processed locally
+   after model loading.
+  </p>
  </div>
 </section>
 
 <footer>
  <div class="logo">ALISHA ∞</div>
- <p>Designed with curiosity. Powered by imagination. ⚡</p>
- <p>© 2026 ALISHA | Future Electrical Engineer</p>
+ <p>ENGINEER YOUR OWN UNIVERSE.</p>
+ <p class="small">Created with ambition, curiosity and imagination. © 2026 ALISHA</p>
 </footer>
 
 <script>
-const messages=document.getElementById("messages");
-function addMessage(text,who){
- const div=document.createElement("div");
- div.className="msg "+who;
- div.textContent=text;
- messages.appendChild(div);
- messages.scrollTop=messages.scrollHeight;
+const voltage=document.getElementById("voltage");
+const resistance=document.getElementById("resistance");
+
+function calculate(){
+ const v=Number(voltage.value),r=Number(resistance.value);
+ if(v<0 || r<=0 || !Number.isFinite(v+r)){
+  document.getElementById("current").textContent="Invalid";
+  document.getElementById("power").textContent="Invalid";
+  return;
+ }
+ const i=v/r;
+ document.getElementById("current").textContent=i.toFixed(3)+" A";
+ document.getElementById("power").textContent=(v*i).toFixed(3)+" W";
 }
-let history=[];
+voltage.addEventListener("input",calculate);
+resistance.addEventListener("input",calculate);
+calculate();
+
+// Animated illustrative waveform, not a physical measurement.
+const canvas=document.getElementById("wave");
+const ctx=canvas.getContext("2d");
+let phase=0;
+function draw(){
+ const w=canvas.clientWidth,h=canvas.clientHeight;
+ const dpr=Math.min(devicePixelRatio||1,2);
+ if(canvas.width!==Math.round(w*dpr)||canvas.height!==Math.round(h*dpr)){
+  canvas.width=Math.round(w*dpr);canvas.height=Math.round(h*dpr);
+ }
+ ctx.setTransform(dpr,0,0,dpr,0,0);
+ ctx.clearRect(0,0,w,h);
+ ctx.strokeStyle="#3a3151";ctx.lineWidth=1;
+ ctx.beginPath();ctx.moveTo(0,h/2);ctx.lineTo(w,h/2);ctx.stroke();
+ ctx.strokeStyle="#65dfff";ctx.lineWidth=2;
+ ctx.shadowBlur=12;ctx.shadowColor="#65dfff";
+ ctx.beginPath();
+ for(let x=0;x<w;x++){
+  const y=h/2-Math.sin(x*.035+phase)*h*.28;
+  x===0?ctx.moveTo(x,y):ctx.lineTo(x,y);
+ }
+ ctx.stroke();ctx.shadowBlur=0;
+ phase+=.035;
+ requestAnimationFrame(draw);
+}
+requestAnimationFrame(draw);
+
+// Local AI using Transformers.js
+let generator=null;
+let busy=false;
+const messages=document.getElementById("messages");
+const statusEl=document.getElementById("aiStatus");
+const loadBtn=document.getElementById("loadBtn");
+const sendBtn=document.getElementById("sendBtn");
+
+let conversation=[
+ {role:"system",content:
+ "You are ALISHA AI, a friendly and encouraging study assistant on Alisha's electrical engineering portfolio. Explain electrical engineering, circuits, electronics, physics, mathematics, programming and science clearly. Use examples and equations where useful. Be honest when unsure. Keep answers reasonably concise."
+ }
+];
+
+function addMessage(text,role){
+ const el=document.createElement("div");
+ el.className="message "+(role==="user"?"user":"bot");
+ el.textContent=text;
+ messages.appendChild(el);
+ messages.scrollTop=messages.scrollHeight;
+ return el;
+}
+
+async function loadAI(){
+ if(generator)return;
+ loadBtn.disabled=true;
+ statusEl.textContent="● Downloading AI model. Please keep this page open...";
+ try{
+  const {pipeline}=await import(
+   "https://cdn.jsdelivr.net/npm/@huggingface/transformers@4"
+  );
+  const model="onnx-community/Qwen2.5-0.5B-Instruct";
+  const progress=(p)=>{
+   if(p.status==="progress"){
+    statusEl.textContent="● Downloading "+(p.file||"model")+" : "+
+      (p.progress||0).toFixed(1)+"%";
+   }else if(p.status==="ready"){
+    statusEl.textContent="● Model component ready";
+   }
+  };
+  try{
+   if(navigator.gpu){
+    statusEl.textContent="● Trying GPU acceleration...";
+    generator=await pipeline("text-generation",model,{
+     device:"webgpu",dtype:"q4",progress_callback:progress
+    });
+   }else{
+    generator=await pipeline("text-generation",model,{
+     dtype:"q4",progress_callback:progress
+    });
+   }
+  }catch(gpuError){
+   generator=null;
+   statusEl.textContent="● Trying CPU mode...";
+   generator=await pipeline("text-generation",model,{
+    dtype:"q4",progress_callback:progress
+   });
+  }
+  statusEl.textContent="● ALISHA AI ONLINE — LOCAL MODEL READY";
+  loadBtn.textContent="AI IS READY ✓";
+  loadBtn.disabled=true;
+  addMessage("My AI brain is ready! Ask me your first question. ⚡","bot");
+ }catch(error){
+  statusEl.textContent="● Could not load model: "+error.message;
+  loadBtn.disabled=false;
+  loadBtn.textContent="RETRY LOADING AI";
+  generator=null;
+ }
+}
+
 async function sendMessage(){
+ if(busy)return;
  const input=document.getElementById("question");
- const key=document.getElementById("apikey").value.trim();
  const q=input.value.trim();
  if(!q)return;
  input.value="";
  addMessage(q,"user");
- history.push({role:"user",parts:[{text:q}]});
- if(!key){
-  addMessage("I'm in demo mode! To activate real AI answers, enter a Gemini API key below. You can get a free-tier key from Google AI Studio.","bot");
+ if(!generator){
+  addMessage("Please press LOAD ALISHA AI BRAIN first. The model needs to download before I can answer.","bot");
   return;
  }
- const loading=document.createElement("div");
- loading.className="msg bot";
- loading.textContent="Alisha AI is thinking... ✨";
- messages.appendChild(loading);
+ busy=true;sendBtn.disabled=true;
+ const loading=addMessage("Thinking... ✨","bot");
  try{
-  const response=await fetch(
-   "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key="+encodeURIComponent(key),
-   {
-    method:"POST",
-    headers:{"Content-Type":"application/json"},
-    body:JSON.stringify({
-     systemInstruction:{parts:[{text:"You are Alisha AI, a friendly, intelligent assistant on Alisha's electrical engineering portfolio website. Help with electrical engineering, electronics, mathematics, science, programming and general questions. Explain clearly and encourage learning."}]},
-     contents:history.slice(-12)
-    })
-   }
-  );
-  const data=await response.json();
-  loading.remove();
-  if(!response.ok)throw new Error(data.error?.message||"API request failed");
-  const answer=data.candidates?.[0]?.content?.parts?.map(p=>p.text||"").join("")||"I couldn't generate a response.";
-  addMessage(answer,"bot");
-  history.push({role:"model",parts:[{text:answer}]});
+  conversation.push({role:"user",content:q});
+  const result=await generator(conversation,{
+   max_new_tokens:180,
+   temperature:0.7,
+   do_sample:true
+  });
+  let output=result[0].generated_text;
+  let answer="";
+  if(Array.isArray(output)){
+   const last=output[output.length-1];
+   answer=typeof last==="string"?last:(last.content||"");
+  }else{
+   answer=String(output);
+  }
+  answer=answer.trim();
+  if(!answer)answer="I couldn't generate an answer. Please try again.";
+  conversation.push({role:"assistant",content:answer});
+  loading.textContent=answer;
+  // Keep context manageable.
+  if(conversation.length>13)conversation=[conversation[0],...conversation.slice(-12)];
  }catch(error){
-  loading.remove();
-  addMessage("Connection issue: "+error.message,"bot");
+  loading.textContent="Sorry, an error occurred: "+error.message;
+  conversation.pop();
+ }finally{
+  busy=false;sendBtn.disabled=false;
+  messages.scrollTop=messages.scrollHeight;
  }
+}
+
+function clearChat(){
+ conversation=[conversation[0]];
+ messages.innerHTML="";
+ addMessage("New conversation started! What shall we learn today? ⚡","bot");
 }
 document.getElementById("question").addEventListener("keydown",e=>{
  if(e.key==="Enter")sendMessage();
